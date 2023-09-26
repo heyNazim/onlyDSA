@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Element</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Enter Position" id="position">
+    <button onclick="deleteEl()">Delete Element</button>
+    <script>
+
+function deleteEl(){
+    data = [1,2,3,4,5]
+    position  = document.getElementById('position').value;
+    position= parseInt(position)
+
+    for(i=position; i<=data.length; i++){
+      data[i]=data[i+1]
+    }
+    // data.length = data.length-1
+    console.log(data)
+}
+
+    
+    </script>
+</body>
+</html>

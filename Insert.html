@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Data In Array</title>
+  </head>
+
+  <body>
+
+    <div class="main">
+      <input type="text" placeholder="Enter New Value" id="newValue" />
+      <input type="text" placeholder="Enter position" id="position" />
+      <button onclick="myfun()">Insert Data</button>
+    </div>
+
+    <script>
+      function myfun() {
+        data = [1, 2, 3, 4];
+        newValue = document.getElementById("newValue").value;
+        position = document.getElementById("position").value;
+
+        for (i = data.length; i >= 0; i--) {
+          if (i >= position) {
+            data[i + 1] = data[i];
+            if (i == position) {
+              data[i] = newValue;
+              data.length = data.length -= 1;
+            }
+          }
+        }
+        console.log(data);
+      }
+    </script>
+    
+  </body>
+</html>
